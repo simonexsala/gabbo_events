@@ -37,8 +37,12 @@ i {
 h1 {
   font-size: 1.5rem;
   font-weight: 500;
-  margin-bottom: 0.4rem;
+  margin-top: 1 rem;
   color: var(--color-heading);
+}
+
+h2 {
+  margin-bottom: 1rem;
 }
 
 @media (min-width: 1024px) {
