@@ -1,14 +1,12 @@
 <template>
   <div class="eventi">
     <div class="evento">
-      <h2>Rosalpina, 1º ottobre</h2>
+      <h1 align="center">Rosalpina, 1º Ottobre</h1>
       <div class="descrizione">
-        <i>Birra illimitata fino a mezzanotte</i>
+        <h2 align="center"><i>Via Pianizza 27, Trento</i></h2>
       </div>
     </div>
-    <div class="image">
-      <img src="../../public/rosalpina.jpg" alt="Rosalpina">
-    </div>
+    <img class="image" src="../../public/rosalpina.jpg" alt="Rosalpina">
   </div>
 </template>
 
@@ -21,11 +19,9 @@
     justify-content: center
   }
 
-  img {
-    max-width: 100%
-  }
-
   .image {
+    max-width: 50%;
+    height: auto;
     flex-basis: 45%;
     order: 2;
   }
@@ -35,10 +31,19 @@
     padding-right: 2rem;
   }
 
-  .descrizione {
-    color: rgb(250, 179, 135);
-    font-size: 1.2rem;
+}
+
+@media screen and (max-width: 800px) {
+  .image {
+    max-width: 100%;
+    height: auto;
+    flex-basis: 45%;
+    order: 2;
   }
+}
+
+.descrizione {
+  color: rgb(250, 179, 135);
 }
 
 h1 {
@@ -46,7 +51,7 @@ h1 {
   color: #FFF;
 }
 
-h2 {
+`` h2 {
   margin-bottom: 1rem;
 }
 </style>
