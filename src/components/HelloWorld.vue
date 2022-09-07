@@ -11,7 +11,7 @@ defineProps({
   <div class="greetings">
     <h1 class="green">{{ msg }}</h1>
     <h3>
-      I migliori eventi di Trento e dintorni. <br />
+      I migliori eventi di Trento e dintorni <br />
       <a target="_blank" href="https://instagram.com/gabbo_events">Instagram</a>
     </h3>
   </div>

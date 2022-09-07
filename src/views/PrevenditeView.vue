@@ -2,7 +2,7 @@
   <div class="prevendite">
     <div v-if="!paidFor">
       <h1 align="center">{{ product.title }}, {{ product.date }}</h1>
-      <h2 align="center">€{{ product.price }} con {{ product.description }}</h2>
+      <h2 align="center"><i>€{{ product.price }} con {{ product.description }}</i></h2>
     </div>
     <div v-if="paidFor">
       <h1>Acquistato</h1>
@@ -22,7 +22,7 @@ export default {
       product: {
         price: 18.00,
         title: "Rosalpina",
-        date: "1 Ottobre",
+        date: "1º Ottobre",
         description: "birra illimitata fino a mezzanotte"
       }
     };
@@ -81,7 +81,6 @@ export default {
   .paypal {
     min-width: 80vh;
   }
-
 }
 
 h1 {

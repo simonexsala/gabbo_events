@@ -14,20 +14,20 @@ import IconCommunity from './icons/IconCommunity.vue'
       <DocumentationIcon />
     </template>
     <template #heading>Eventi</template>
-    Prossimo evento alla Villa dei negri.
+    Prossimo evento 1º ottobre a Rosalpina
   </WelcomeItem>
   <WelcomeItem>
     <template #icon>
       <CommunityIcon />
     </template>
     <template #heading>Appuntamenti fissi</template>
-    Tre portoni.
+    Il mercoledì dei Tre Portoni
   </WelcomeItem>
   <WelcomeItem>
     <template #icon>
       <SupportIcon />
     </template>
     <template #heading>Prevendite</template>
-    Acquista l'ingresso per il prossimo evento.
+    Acquista l'ingresso per il prossimo evento
   </WelcomeItem>
 </template>
