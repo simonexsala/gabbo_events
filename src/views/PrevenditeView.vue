@@ -8,7 +8,7 @@
       <h1>Acquistato</h1>
       <img src="https://media.giphy.com/media/rf1wOXqAMKVT22uPNw/giphy.gif">
     </div>
-    <div id="paypal-container" class="paypal"></div>
+    <div id="paypal-container" class="paypal" align="center"></div>
   </div>
 </template>
 
