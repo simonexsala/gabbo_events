@@ -59,16 +59,14 @@
   font-weight: normal;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&display=swap');
-
 body {
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif
   min-height: 100vh;
   color: var(--color-text);
   background: var(--color-background);
   transition: color 0.5s, background-color 0.5s;
   line-height: 1.6;
-  font-family: 'Fira Sans', sans-serif;
-  font: 15px "Fira Sans";
+  font: 15px;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
