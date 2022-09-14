@@ -20,7 +20,7 @@ export default {
       loaded: false,
       paidFor: false,
       product: {
-        price: 2.00,
+        price: 1.00,
         title: "Rosalpina",
         date: "1º Ottobre",
         description: "test",
