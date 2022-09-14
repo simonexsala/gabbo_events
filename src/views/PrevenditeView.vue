@@ -5,8 +5,8 @@
       <h2 align="center"><i>€{{ product.price }} con {{ product.description }}</i></h2>
     </div>
     <div v-if="paidFor">
-      <h1>Acquistato</h1>
-      <img src="https://media.giphy.com/media/rf1wOXqAMKVT22uPNw/giphy.gif">
+      <h1 align="center">Grazie per aver acquistato!</h1>
+      <h2 align="center"><i>Ci vediamo il {{ product.date }}</i></h2>
     </div>
     <div id="paypal-container" class="paypal" align="center"></div>
   </div>
@@ -20,16 +20,16 @@ export default {
       loaded: false,
       paidFor: false,
       product: {
-        price: 18.00,
+        price: 2.00,
         title: "Rosalpina",
         date: "1º Ottobre",
-        description: "birra illimitata fino a mezzanotte"
+        description: "test",
       }
     };
   },
   mounted: function () {
     const script = document.createElement("script");
-    script.src = "https://www.paypal.com/sdk/js?currency=EUR&client-id=Ac9oS9mmEEJPL2XIfkDQOKVKHMK7mDPv3Qn7A2JMSJeAbb2gGbS5i4NRprRHXCNjl8v58meYWFAl8v0-";
+    script.src = "https://www.paypal.com/sdk/js?currency=EUR&client-id=AYt8UxPRZS1k32KYmPOV142g7_hmJbEFpNmooZ73Ts79E6PWT4dNM94czFJzE-EJWF2iV3Ue1yaIRkKP";
     script.addEventListener("load", this.setLoaded);
     document.body.appendChild(script);
   },
@@ -47,7 +47,7 @@ export default {
         createOrder: (data, actions) => {
           return actions.order.create({
             purchase_units: [{
-              description: this.product.title,
+              description: "Gabbo Events " + this.product.title + " " + this.product.date,
               amount: {
                 currency_code: "EUR",
                 value: this.product.price
@@ -59,7 +59,8 @@ export default {
           return actions.order.capture().then(function (orderData) {
             console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
             const transaction = orderData.purchase_units[0].payments.captures[0];
-            alert(`Transaction ${transaction.status}: ${transaction.id}\n\nSee console for all available details`);
+            this.paidFor = true;
+            console.log(`Transaction ${transaction.status}: ${transaction.id}\n\nSee console for all available details`);
           });
         }
       }).render('#paypal-container');
@@ -79,7 +80,7 @@ export default {
   }
 
   .paypal {
-    min-width: 80vh;
+    min-width: 50vh;
   }
 }
 

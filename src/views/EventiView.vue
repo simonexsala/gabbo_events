@@ -10,7 +10,7 @@
   </div>
 </template>
 
-<style>
+<style scoped>
 @media (min-width: 1024px) {
   .eventi {
     min-height: 100vh;
