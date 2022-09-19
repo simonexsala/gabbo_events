@@ -20,10 +20,10 @@ export default {
       loaded: false,
       paidFor: false,
       product: {
-        price: 1.00,
+        price: 15.00,
         title: "Rosalpina",
         date: "1º Ottobre",
-        description: "test",
+        description: "birra illimitata fino all'una",
       }
     };
   },

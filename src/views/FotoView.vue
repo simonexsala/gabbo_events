@@ -1,6 +1,6 @@
 <template>
   <div class="foto">
-    <h1 align="center">Galleria eventi</h1>
+    <h1 align="center">Coming soon...</h1>
   </div>
 </template>
 

@@ -6,7 +6,7 @@
         <h2 align="center"><i>Via Pianizza 27, Trento</i></h2>
       </div>
     </div>
-    <img class="image" src="../../public/rosalpina.jpg" alt="Rosalpina">
+    <img class="image" src="../../public/rosalpina.png" alt="Rosalpina">
   </div>
 </template>
 
