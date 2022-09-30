@@ -11,7 +11,7 @@ import SupportIcon from './icons/IconSupport.vue'
       <DocumentationIcon />
     </template>
     <template #heading>Eventi</template>
-    Prossimo evento 1º ottobre a Rosalpina
+    Autumn Party 1º ottobre alla Rosalpina
   </WelcomeItem>
   <WelcomeItem>
     <template #icon>
