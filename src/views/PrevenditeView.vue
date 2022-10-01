@@ -1,6 +1,6 @@
 <template>
   <div class="prevendite">
-<h1 align="center">Rosalpina, 1° Ottobre</h1>
+<h1 align="center">Rosalpina, 1º Ottobre</h1>
 <h2 align="center"><i>Prevendite sold out!</i></h2>
     <!--
 <div v-if="!paidFor">
