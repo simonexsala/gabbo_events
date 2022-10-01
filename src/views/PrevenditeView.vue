@@ -1,6 +1,9 @@
 <template>
   <div class="prevendite">
-    <div v-if="!paidFor">
+<h1 align="center">Rosalpina, 1° Ottobre</h1>
+<h2 align="center"><i>Prevendite sold out!</i></h2>
+    <!--
+<div v-if="!paidFor">
       <h1 align="center">{{ product.title }}, {{ product.date }}</h1>
       <div align="center">
       <button class="button" @click="product.price = 15; product.description = 'drink'; selected = true">
@@ -18,7 +21,8 @@
       <h2 align="center"><i>Ci vediamo il {{ product.date }}!</i></h2>
     </div>
     <div id="paypal-container" class="paypal" align="center"></div>
-  </div>
+  -->
+</div>
 </template>
 
 <script>
