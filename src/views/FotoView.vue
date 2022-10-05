@@ -1,6 +1,7 @@
 <template>
   <div class="foto">
-    <h1 align="center">Coming soon...</h1>
+    <h1 align="center">Foto eventi</h1>
+    <a target="_blank" href="https://we.tl/t-ycKGM1icZU">Autumn Party</a>
   </div>
 </template>
 
