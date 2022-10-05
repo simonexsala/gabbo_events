@@ -1,7 +1,7 @@
 <template>
   <div class="foto">
     <h1 align="center">Foto eventi</h1>
-    <a align="center" class="green" target="_blank" href="https://we.tl/t-ycKGM1icZU">Autumn Party</a>
+    <a align="center" class="foto" target="_blank" href="https://we.tl/t-ycKGM1icZU">Autumn Party</a>
   </div>
 </template>
 
@@ -14,6 +14,11 @@
     display: flex;
     flex-direction: column;
   }
+}
+
+.foto {
+  font-size: 1.2rem;
+  font-style: italic;
 }
 
 h1 {
