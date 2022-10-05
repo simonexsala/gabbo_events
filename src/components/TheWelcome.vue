@@ -10,7 +10,7 @@ import PartyIcon from './icons/IconParty.vue'
 <template>
   <WelcomeItem>
     <template #icon>
-      <PartyIcon />
+      <DocumentationIcon />
     </template>
     <template #heading>Eventi</template>
     Autumn Party 1º ottobre alla Rosalpina
