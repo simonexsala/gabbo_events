@@ -3,9 +3,7 @@
     <h1 align="center">Foto eventi</h1>
     <h2 align="center">
       <a target="_blank" href="https://we.tl/t-ycKGM1icZU">Autumn Party</a>
-      <font-awesome-icon icon="fa-regular fa-link" />
-      Aaa
-<i class="fa-regular fa-link"></i>
+      
     </h2>
   </div>
 </template>
