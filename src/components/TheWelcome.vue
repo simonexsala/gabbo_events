@@ -3,12 +3,14 @@ import WelcomeItem from './WelcomeItem.vue'
 import DocumentationIcon from './icons/IconDocumentation.vue'
 import CommunityIcon from './icons/IconCommunity.vue'
 import SupportIcon from './icons/IconSupport.vue'
+
+import PartyIcon from './icons/IconParty.vue'
 </script>
 
 <template>
   <WelcomeItem>
     <template #icon>
-      <DocumentationIcon />
+      <PartyIcon />
     </template>
     <template #heading>Eventi</template>
     Autumn Party 1º ottobre alla Rosalpina
