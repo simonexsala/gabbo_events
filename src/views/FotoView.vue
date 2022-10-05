@@ -1,11 +1,11 @@
 <template>
   <div class="foto">
     <h1 align="center">Foto eventi</h1>
-    <a align="center" class="evento" target="_blank" href="https://we.tl/t-ycKGM1icZU">Autumn Party</a>
+    <a align="center" target="_blank" href="https://we.tl/t-ycKGM1icZU">Autumn Party</a>
   </div>
 </template>
 
-<style>
+<style scoped>
 @media (min-width: 1024px) {
   .foto {
     min-height: 100vh;
@@ -16,8 +16,11 @@
   }
 }
 
-.evento {
-  text-align: center;
+.foto {
+  align-items: center; 
+}
+
+a {
   font-size: 1.2rem;
   font-style: italic;
 }
