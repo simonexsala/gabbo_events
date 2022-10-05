@@ -21,9 +21,7 @@
 }
 
 a {
-  font-size: 1.5rem;
   font-style: italic;
-  margin-bottom: 1rem;
 }
 
 h1 {
