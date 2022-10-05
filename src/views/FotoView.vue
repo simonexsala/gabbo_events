@@ -1,7 +1,7 @@
 <template>
   <div class="foto">
     <h1 align="center">Foto eventi</h1>
-    <a align="center" class="foto" target="_blank" href="https://we.tl/t-ycKGM1icZU">Autumn Party</a>
+    <a align="center" class="evento" target="_blank" href="https://we.tl/t-ycKGM1icZU">Autumn Party</a>
   </div>
 </template>
 
@@ -16,7 +16,8 @@
   }
 }
 
-.foto {
+.evento {
+  text-align: center;
   font-size: 1.2rem;
   font-style: italic;
 }
