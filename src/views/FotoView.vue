@@ -1,9 +1,7 @@
 <template>
   <div class="foto">
     <h1 align="center">Foto eventi</h1>
-    <div align="center">
-      <a align="center" target="_blank" href="https://we.tl/t-ycKGM1icZU">Autumn Party</a>
-    </div>
+    <h2 align="center"><a target="_blank" href="https://we.tl/t-ycKGM1icZU">Autumn Party</a></h2>
   </div>
 </template>
 
