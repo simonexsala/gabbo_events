@@ -11,11 +11,9 @@
         </a>
       </h2>
     </div>
-    <div>
-      <a target="_blank" href="https://we.tl/t-ycKGM1icZU">
-        <img class="image" src="../../public/eventi/autumn.jpg" alt="Autumn Party">
-      </a>
-    </div>
+    <a class="imageLink" target="_blank" href="https://we.tl/t-ycKGM1icZU">
+      <img class="image" src="../../public/eventi/autumn.jpg" alt="Autumn Party">
+    </a>
   </div>
 </template>
 
@@ -28,11 +26,16 @@
     justify-content: center
   }
 
-  .image {
+  .imageLink {
     max-width: 50%;
     height: auto;
     flex-basis: 45%;
     order: 2;
+  }
+
+  .image {
+    max-width: 100%;
+    height: auto;
   }
 
   .evento {

@@ -113,7 +113,7 @@ export default {
   }
 
   .paypal {
-    min-width: 50vh;
+    width: 100%;
   }
 }
 
@@ -155,12 +155,12 @@ h3 {
 }
 
 .button:hover {
-  background-color: #fab387;
+  background-color: #F16466;
   color: #fff;
 }
 
 button:focus { 
-  background-color: #fab387; 
+  background-color: #F16466; 
   color: #fff; 
 }
 

@@ -1,32 +1,30 @@
 <script setup>
 import WelcomeItem from './WelcomeItem.vue'
-import DocumentationIcon from './icons/IconDocumentation.vue'
-import CommunityIcon from './icons/IconCommunity.vue'
-import SupportIcon from './icons/IconSupport.vue'
-
+import EventIcon from './icons/IconEvent.vue'
+import HeartIcon from './icons/IconHeart.vue'
 import PartyIcon from './icons/IconParty.vue'
 </script>
 
 <template>
   <WelcomeItem>
     <template #icon>
-      <DocumentationIcon />
+      <EventIcon />
     </template>
     <template #heading>Eventi</template>
-    Neon Party 22 ottobre alla Rosalpina
+    Il 22 Ottobre Neon Party a Rosalpina
   </WelcomeItem>
   <WelcomeItem>
     <template #icon>
-      <CommunityIcon />
+      <HeartIcon />
+    </template>
+    <template #heading>Prevendite</template>
+    Acquista il biglietto d'ingresso per il prossimo evento
+  </WelcomeItem>
+  <WelcomeItem>
+    <template #icon>
+      <PartyIcon />
     </template>
     <template #heading>Appuntamenti fissi</template>
     Il mercoledì dei Tre Portoni
-  </WelcomeItem>
-  <WelcomeItem>
-    <template #icon>
-      <SupportIcon />
-    </template>
-    <template #heading>Prevendite</template>
-    Acquista l'ingresso per il prossimo evento
   </WelcomeItem>
 </template>

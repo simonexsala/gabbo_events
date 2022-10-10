@@ -35,9 +35,8 @@ i {
 }
 
 h1 {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 500;
-  margin-top: 1 rem;
   color: var(--color-heading);
 }
 
@@ -48,7 +47,7 @@ h2 {
 @media (min-width: 1024px) {
   .item {
     margin-top: 0;
-    padding: 0.4rem 0 1rem calc(var(--section-gap) / 2);
+    padding: 0.4rem 0 1rem calc(var(--section-gap) / 3);
   }
 
   i {
@@ -57,7 +56,7 @@ h2 {
     position: absolute;
     border: 1px solid var(--color-border);
     background: var(--color-background);
-    border-radius: 8px;
+    border-radius: 50px;
     width: 50px;
     height: 50px;
   }
