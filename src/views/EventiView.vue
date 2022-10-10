@@ -28,10 +28,9 @@
     flex-direction: column;
     padding-right: 2rem;
   }
-
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1024px) {
   .image {
     max-width: 100%;
     height: auto;

@@ -24,16 +24,22 @@
           Birra
         </button>
       </div>
-        <h3 v-if="selected" align="center">
-          <i>€{{ product.price }} con {{ product.description }}</i>
-        </h3>
-        <h3 v-else align="center"><i>Seleziona il tipo di ingresso</i></h3>
-      </div>
-      <div v-if="paidFor">
-        <h1 align="center">Grazie per aver acquistato!</h1>
-        <h2 align="center"><i>Ci vediamo il {{ product.date }}!</i></h2>
-      </div>
-    <div id="paypal-container" class="paypal" align="center"></div>
+
+      <h3 v-if="selected" align="center">
+        <i>€{{ product.price }} con {{ product.description }}</i>
+      </h3>
+      <h3 v-else align="center"><i>Seleziona il tipo di ingresso</i></h3>
+    </div>
+
+    <div align="center">
+      <span v-if="!loaded" class="loader"></span>
+    </div>
+
+    <div v-if="paidfor">
+      <h1 align="center">Grazie per aver acquistato!</h1>
+      <h2 align="center"><i>ci vediamo il {{ product.date }}!</i></h2>
+    </div>
+  <div id="paypal-container" class="paypal" align="center"></div>
 </div>
 </template>
 
@@ -96,7 +102,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 @media (min-width: 1024px) {
   .prevendite {
     min-height: 100vh;
@@ -109,6 +115,16 @@ export default {
   .paypal {
     min-width: 50vh;
   }
+}
+
+h1 {
+  margin-top: 1rem;
+  color: #FFF;
+}
+
+h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
 }
 
 .button {
@@ -135,7 +151,7 @@ export default {
 }
 
 .button:not(:last-child) {
- margin-right: 12px;
+  margin-right: 12px;
 }
 
 .button:hover {
@@ -148,29 +164,39 @@ button:focus {
   color: #fff; 
 }
 
-h1 {
-  margin-top: 1rem;
-  color: #FFF;
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #FFF;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
 }
 
-h3 {
-  font-size: 1.3rem;
-  margin-bottom: 1rem;
-}
+@keyframes rotation {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+} 
 
 .neonText {
   animation: flicker 1.5s infinite alternate;
   color: #fff;
   font-family: "Vibur", sans-serif;
-  font-size: 2.5rem;
---neon-text-color: #FAB387;
+  font-size: 2.6rem;
+  --neon-text-color: #7287fd;
 }
 
 @keyframes flicker {
     0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
         text-shadow:
-            -0.2rem -0.2rem 1rem #fff,
-            0.2rem 0.2rem 1rem #fff,
+            -0.1rem -0.1rem 0.8rem #fff,
+            0.1rem 0.1rem 0.8rem #fff,
             0 0 2rem var(--neon-text-color),
             0 0 4rem var(--neon-text-color),
             0 0 6rem var(--neon-text-color),

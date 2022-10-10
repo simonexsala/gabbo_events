@@ -49,9 +49,9 @@ nav a.router-link-exact-active:hover {
 }
 
 nav a {
-  font-size: 0.9rem;
+  font-size: 1rem;
   display: inline-block;
-  padding: 0 1rem;
+  padding: 0 0.7rem;
   border-left: 1px solid var(--color-border);
 }
 
