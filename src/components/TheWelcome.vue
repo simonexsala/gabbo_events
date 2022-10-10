@@ -11,7 +11,7 @@ import PartyIcon from './icons/IconParty.vue'
       <EventIcon />
     </template>
     <template #heading>Eventi</template>
-    Il 22 Ottobre Neon Party a Rosalpina
+  Coming soon...
   </WelcomeItem>
   <WelcomeItem>
     <template #icon>

@@ -1,8 +1,8 @@
 <template>
   <div class="eventi">
     <div class="evento">
-      <h1 align="center">Rosalpina, 22 Ottobre</h1>
-      <h2 align="center"><i>Via Pianizza 27, Trento</i></h2>
+      <h1 align="center">Coming soon...</h1>
+      <h2 align="center"><i>Location speciale</i></h2>
     </div>
     <img class="image" src="../../public/rosalpina.jpg" alt="Rosalpina">
   </div>

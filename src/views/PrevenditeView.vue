@@ -1,9 +1,8 @@
 <template>
   <div class="prevendite">
-    <!--
-    <h1 align="center">Rosalpina, 22 Ottobre</h1>
+    <h1 align="center">Autumn Party</h1>
     <h2 align="center"><i>Prevendite sold out!</i></h2>
-    -->
+    <!--
     <div v-if="!paidFor">
       <h1 class="neonText" align="center">
         {{ product.title }}
@@ -40,6 +39,7 @@
       <h2 align="center"><i>ci vediamo il {{ product.date }}!</i></h2>
     </div>
   <div id="paypal-container" class="paypal" align="center"></div>
+  -->
 </div>
 </template>
 
