@@ -13,7 +13,7 @@ import PartyIcon from './icons/IconParty.vue'
       <DocumentationIcon />
     </template>
     <template #heading>Eventi</template>
-    Autumn Party 1º ottobre alla Rosalpina
+    Neon Party 22 ottobre alla Rosalpina
   </WelcomeItem>
   <WelcomeItem>
     <template #icon>

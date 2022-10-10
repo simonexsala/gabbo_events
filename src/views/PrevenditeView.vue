@@ -1,27 +1,39 @@
 <template>
   <div class="prevendite">
-<h1 align="center">Rosalpina, 1º Ottobre</h1>
-<h2 align="center"><i>Prevendite sold out!</i></h2>
     <!--
-<div v-if="!paidFor">
-      <h1 align="center">{{ product.title }}, {{ product.date }}</h1>
+    <h1 align="center">Rosalpina, 22 Ottobre</h1>
+    <h2 align="center"><i>Prevendite sold out!</i></h2>
+    -->
+    <div v-if="!paidFor">
+      <h1 class="neonText" align="center">
+        {{ product.title }}
+      </h1>
+      <h2 align="center">
+        {{ product.location }}, {{ product.date }}
+      </h2>
+
       <div align="center">
-      <button class="button" @click="product.price = 15; product.description = 'drink'; selected = true">
-        Drink
-      </button>
-      <button class="button" @click="product.price = 17; product.description = 'birra illimitata'; selected = true">
-        Birra
-      </button>
-    </div>
-      <h2 v-if="selected" align="center"><i>€{{ product.price }} con {{ product.description }}</i></h2>
-      <h2 v-else align="center"><i>Seleziona il tipo di ingresso</i></h2>
-    </div>
-    <div v-if="paidFor">
-      <h1 align="center">Grazie per aver acquistato!</h1>
-      <h2 align="center"><i>Ci vediamo il {{ product.date }}!</i></h2>
-    </div>
+        <button 
+          class="button" 
+          @click="product.price = 15; product.description = 'drink'; selected = true">
+          Drink
+        </button>
+        <button 
+          class="button" 
+          @click="product.price = 17; product.description = 'birra illimitata'; selected = true">
+          Birra
+        </button>
+      </div>
+        <h3 v-if="selected" align="center">
+          <i>€{{ product.price }} con {{ product.description }}</i>
+        </h3>
+        <h3 v-else align="center"><i>Seleziona il tipo di ingresso</i></h3>
+      </div>
+      <div v-if="paidFor">
+        <h1 align="center">Grazie per aver acquistato!</h1>
+        <h2 align="center"><i>Ci vediamo il {{ product.date }}!</i></h2>
+      </div>
     <div id="paypal-container" class="paypal" align="center"></div>
-  -->
 </div>
 </template>
 
@@ -34,9 +46,10 @@ export default {
       paidFor: false,
       selected: false,
       product: {
+        title: "Neon Party",
         price: 0,
-        title: "Rosalpina",
-        date: "1º Ottobre",
+        location: "Rosalpina",
+        date: "22 Ottobre",
         description: "",
       },
     };
@@ -140,7 +153,34 @@ h1 {
   color: #FFF;
 }
 
-h2 {
+h3 {
+  font-size: 1.3rem;
   margin-bottom: 1rem;
 }
+
+.neonText {
+  animation: flicker 1.5s infinite alternate;
+  color: #fff;
+  font-family: "Vibur", sans-serif;
+  font-size: 2.5rem;
+--neon-text-color: #FAB387;
+}
+
+@keyframes flicker {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        text-shadow:
+            -0.2rem -0.2rem 1rem #fff,
+            0.2rem 0.2rem 1rem #fff,
+            0 0 2rem var(--neon-text-color),
+            0 0 4rem var(--neon-text-color),
+            0 0 6rem var(--neon-text-color),
+            0 0 8rem var(--neon-text-color),
+            0 0 10rem var(--neon-text-color);
+    }
+    20%, 24%, 55% {        
+        text-shadow: none;
+        box-shadow: none;
+    }    
+}
+
 </style>

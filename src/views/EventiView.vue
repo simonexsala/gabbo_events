@@ -1,12 +1,10 @@
 <template>
   <div class="eventi">
     <div class="evento">
-      <h1 align="center">Rosalpina, 1º Ottobre</h1>
-      <div class="descrizione">
-        <h2 align="center"><i>Via Pianizza 27, Trento</i></h2>
-      </div>
+      <h1 align="center">Rosalpina, 22 Ottobre</h1>
+      <h2 align="center"><i>Via Pianizza 27, Trento</i></h2>
     </div>
-    <img class="image" src="../../public/rosalpina.png" alt="Rosalpina">
+    <img class="image" src="../../public/rosalpina.jpg" alt="Rosalpina">
   </div>
 </template>
 
@@ -40,10 +38,6 @@
     flex-basis: 45%;
     order: 2;
   }
-}
-
-.descrizione {
-  color: rgb(250, 179, 135);
 }
 
 h1 {
