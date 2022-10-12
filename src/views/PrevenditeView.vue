@@ -90,6 +90,7 @@ export default {
             }]
           });
         },
+
         onApprove: (data, actions) => {
           return actions.order.capture().then(function (orderData) {
             console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
