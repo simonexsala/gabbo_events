@@ -206,7 +206,7 @@ button:focus {
   }
   50% {
     text-shadow: 0 0 .5vw #082180, 0 0 1.5vw #082180, 0 0 5vw #082180, 0 0 5vw #082180, 0 0 .2vw #082180, .5vw .5vw .1vw #0A3940;
-    color: #146C80;
+    color: #babbf1;
   }
 }
 
