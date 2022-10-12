@@ -1,8 +1,9 @@
 <template>
   <div class="prevendite">
+    <!--
     <h1 align="center">Autumn Party</h1>
     <h2 align="center"><i>Prevendite sold out!</i></h2>
-    <!--
+  -->
     <div v-if="!paidFor">
       <h1 class="neonText" align="center">
         {{ product.title }}
@@ -11,6 +12,7 @@
         {{ product.location }}, {{ product.date }}
       </h2>
 
+<!-- Multiple selection:
       <div align="center">
         <button 
           class="button" 
@@ -23,9 +25,10 @@
           Birra
         </button>
       </div>
+      -->
 
       <h3 v-if="selected" align="center">
-        <i>€{{ product.price }} con {{ product.description }}</i>
+        <i>€{{ product.price }}0 con {{ product.description }}</i>
       </h3>
       <h3 v-else align="center"><i>Seleziona il tipo di ingresso</i></h3>
     </div>
@@ -39,7 +42,6 @@
       <h2 align="center"><i>ci vediamo il {{ product.date }}!</i></h2>
     </div>
   <div id="paypal-container" class="paypal" align="center"></div>
-  -->
 </div>
 </template>
 
@@ -50,13 +52,13 @@ export default {
     return {
       loaded: false,
       paidFor: false,
-      selected: false,
+      selected: true,
       product: {
         title: "Neon Party",
-        price: 0,
+        price: 14.7,
         location: "Rosalpina",
         date: "22 Ottobre",
-        description: "",
+        description: "free drink",
       },
     };
   },
@@ -189,24 +191,23 @@ button:focus {
   color: #fff;
   font-family: "Vibur", sans-serif;
   font-size: 2.6rem;
-  --neon-text-color: #7287fd;
+  text-shadow: 0 0 3vw #F26366;
+
+  animation: neon 1.5s ease infinite;
+  -moz-animation: neon 1.5s ease infinite;
+  -webkit-animation: neon 1.5s ease infinite;
 }
 
-@keyframes flicker {
-    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
-        text-shadow:
-            -0.1rem -0.1rem 0.8rem #fff,
-            0.1rem 0.1rem 0.8rem #fff,
-            0 0 2rem var(--neon-text-color),
-            0 0 4rem var(--neon-text-color),
-            0 0 6rem var(--neon-text-color),
-            0 0 8rem var(--neon-text-color),
-            0 0 10rem var(--neon-text-color);
-    }
-    20%, 24%, 55% {        
-        text-shadow: none;
-        box-shadow: none;
-    }    
+@keyframes neon {
+  0%,
+  100% {
+    text-shadow: 0 0 1vw #1041FF, 0 0 3vw #1041FF, 0 0 10vw #1041FF, 0 0 10vw #1041FF, 0 0 .4vw #8BFDFE, .5vw .5vw .1vw #147280;
+    color: #28D7FE;
+  }
+  50% {
+    text-shadow: 0 0 .5vw #082180, 0 0 1.5vw #082180, 0 0 5vw #082180, 0 0 5vw #082180, 0 0 .2vw #082180, .5vw .5vw .1vw #0A3940;
+    color: #146C80;
+  }
 }
 
 </style>
