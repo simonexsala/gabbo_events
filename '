@@ -6,8 +6,9 @@ import router from './router'
 
 import './assets/main.css'
 
+Vue.prototype.$event =  { title: "Terror Party", location: "Rosalpina", date: "1º Novembre"};
+
 const app = createApp(App)
-app.config.globalProperties.$event =  { title: "Terror Party", location: "Rosalpina", date: "1º Novembre", venue: "alla discoteca" }
 
 app.use(createPinia())
 app.use(router)

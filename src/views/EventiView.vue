@@ -1,8 +1,8 @@
 <template>
   <div class="eventi">
     <div class="evento">
-      <h1 align="center">Neon Party</h1>
-      <h2 align="center"><i>Rosalpina, 22 Ottobre</i></h2>
+      <h1 align="center">{{ $event.title }}</h1>
+      <h2 align="center"><i>{{ $event.location }}, {{ $event.date }}</i></h2>
     </div>
     <img class="image" src="../../public/rosalpina.jpg" alt="Rosalpina">
   </div>
