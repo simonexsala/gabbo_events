@@ -2,7 +2,8 @@
   <div class="eventi">
     <div class="evento">
       <h1 align="center">{{ $event.title }}</h1>
-      <h2 align="center"><i>{{ $event.location }}, {{ $event.date }}</i></h2>
+      <h2 align="center">{{ $event.location }}, {{ $event.date }}</h2>
+      <h3 align="center"><i>{{ $event.address }}</i></h3>
     </div>
     <img class="image" src="../../public/rosalpina.jpg" alt="Rosalpina">
   </div>
@@ -44,7 +45,7 @@ h1 {
   color: #FFF;
 }
 
-h2 {
+h3 {
   margin-bottom: 1rem;
 }
 </style>
