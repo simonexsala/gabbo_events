@@ -11,7 +11,7 @@ import PartyIcon from './icons/IconParty.vue'
       <EventIcon />
     </template>
     <template #heading>Eventi</template>
-    {{ $event.title }}, il {{ $event.date }} {{ $event.venue }}{{ $event.location }} 
+    {{ $event.title }}, {{ $event.date }} {{ $event.venue }}{{ $event.location }} 
   </WelcomeItem>
   <WelcomeItem>
     <template #icon>

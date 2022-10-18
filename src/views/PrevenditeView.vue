@@ -104,7 +104,7 @@ export default {
   name: "Prevendite",
   data: function () {
     return {
-      active: true,
+      active: false,
       soldOut: false,
 
       selected: false,
@@ -116,7 +116,7 @@ export default {
         title: "Scream Party",
         price: 15.70,
         location: "Arena FlyMusic",
-        date: "31 Ottobre",
+        date: "Data da definirsi",
         description: "",
       },
     };
