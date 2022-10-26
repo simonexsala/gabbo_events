@@ -104,7 +104,7 @@ export default {
   name: "Prevendite",
   data: function () {
     return {
-      active: false,
+      active: true,
       soldOut: false,
 
       selected: false,
@@ -113,10 +113,10 @@ export default {
 
       loaded: false,
       product: {
-        title: "Scream Party",
+        title: "Una notte da Leoni",
         price: 15.70,
-        location: "Arena FlyMusic",
-        date: "Data da definirsi",
+        location: "Assicura Arena",
+        date: "12 Novembre",
         description: "",
       },
     };
