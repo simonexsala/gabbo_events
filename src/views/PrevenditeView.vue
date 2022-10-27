@@ -1,7 +1,7 @@
 <template>
   <div class="prevendite">
     <div v-if="!active || soldOut">
-      <h1 class="terrorText">{{ $event.title }}</h1>
+      <h1 class="eventText">{{ $event.title }}</h1>
       <h2 v-if="soldOut" align="center"><i>Prevendite sold out!</i></h2> 
       <h2 v-else align="center"><i>Prevendite a breve disponibili!</i></h2>
 
@@ -53,7 +53,7 @@
     </div>
     <div v-else>
       <div v-if="!paidFor">
-        <h1 class="terrorText">
+        <h1 class="eventText">
           {{ product.title }}
         </h1>
         <h2 align="center">
@@ -78,10 +78,13 @@
           </h3>
           <h3 v-else align="center"><i>Seleziona il tipo di ingresso</i></h3>
         </div>
-        <div v-else>
-          <h3 align="center">
+        <div v-else align="center" style="margin-bottom: 1rem;">
+          <h3 align="center" style="color: #fff">
             <i>Ingresso €{{ product.price }}0 {{ product.description }}</i>
           </h3>
+          <div style="font-size: 0.9rem;">
+            <i>Commissione €0.70</i>
+          </div>
         </div>
       </div>
 
@@ -89,7 +92,7 @@
         <span v-if="!loaded" class="loader"></span>
       </div>
 
-      <div v-if="paidfor">
+      <div v-if="paidFor">
         <h1 align="center">Grazie per aver acquistato!</h1>
         <h2 align="center"><i>ci vediamo il {{ product.date }}!</i></h2>
       </div>
@@ -195,7 +198,6 @@ h2 {
 
 h3 {
   font-size: 1.3rem;
-  margin-bottom: 1rem;
   text-align: center;
 }
 
@@ -255,39 +257,6 @@ button:focus {
       transform: rotate(360deg);
   }
 } 
-
-/* Neon */
-
-.neonText {
-  animation: flicker 1.5s infinite alternate;
-  color: #fff;
-  font-family: "Vibur", sans-serif;
-  font-size: 2.6rem;
-  text-shadow: 0 0 3vw #F26366;
-
-  animation: neon 1.5s ease infinite;
-  -moz-animation: neon 1.5s ease infinite;
-  -webkit-animation: neon 1.5s ease infinite;
-}
-
-@keyframes neon {
-  0%,
-  100% {
-    text-shadow: 0 0 1vw #1041FF, 0 0 3vw #1041FF, 0 0 10vw #1041FF, 0 0 10vw #1041FF, 0 0 .4vw #8BFDFE, .5vw .5vw .1vw #147280;
-    color: #28D7FE;
-  }
-  50% {
-    text-shadow: 0 0 .5vw #082180, 0 0 1.5vw #082180, 0 0 5vw #082180, 0 0 5vw #082180, 0 0 .2vw #082180, .5vw .5vw .1vw #0A3940;
-    color: #babbf1;
-  }
-}
-
-/* Halloween */
-.terrorText {
-  font-family: 'Creepster', cursive;
-  font-size: 2.6rem;
-  text-shadow: 0 0 3vw #F26366;
-}
 
 .ghost {
   animation: float 3s ease-out infinite;

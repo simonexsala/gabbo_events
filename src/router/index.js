@@ -23,7 +23,12 @@ const router = createRouter({
       path: '/eventi',
       name: 'eventi',
       component: () => import('../views/EventiView.vue')
-    }
+    },
+    {
+      path: '/navette',
+      name: 'navette',
+      component: () => import('../views/NavetteView.vue')
+    },
   ]
 })
 

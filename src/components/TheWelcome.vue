@@ -24,7 +24,7 @@ import PartyIcon from './icons/IconParty.vue'
     <template #icon>
       <PartyIcon />
     </template>
-    <template #heading>Appuntamenti fissi</template>
-    Il mercoledì dei Tre Portoni
+    <template #heading>Navette</template>
+    Consulta gli orari del trasporto
   </WelcomeItem>
 </template>

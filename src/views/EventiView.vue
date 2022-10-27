@@ -1,7 +1,7 @@
 <template>
   <div class="eventi">
     <div class="evento">
-      <h1 class="terrorText" align="center">{{ $event.title }}</h1>
+      <h1 class="eventText" align="center">{{ $event.title }}</h1>
       <h2 align="center">{{ $event.location }}, {{ $event.date }}</h2>
       <h3 align="center"><i>{{ $event.address }}</i></h3>
     </div>
@@ -47,11 +47,5 @@ h1 {
 
 h3 {
   margin-bottom: 1rem;
-}
-
-.terrorText {
-  font-family: 'Creepster', cursive;
-  font-size: 2.6rem;
-  text-shadow: 0 0 3vw #F26366;
 }
 </style>
