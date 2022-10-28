@@ -58,11 +58,16 @@
       <h2 align="center">
         {{ product.location }}, {{ product.date }}
       </h2>
+      
+      <h3>
+        <i>Partenza dalla fermata Flixbus Lungadige (Zona Funivia)</i>
+      </h3>
+
 
       <div id="trips">
         <div class="container">
           <div class="left">
-            <h3 style="margin-bottom: 1rem; color: #fff;"><i>Andata</i></h3>
+            <h4 style="margin-bottom: 1rem; color: #fff;"><i>Andata</i></h4>
             <form align="center" id="andata">
               <label>
                 <input type="radio" name="andata" v-model="andata"/>
@@ -79,7 +84,7 @@
             </form>
           </div>
           <div class="right" id="ritorno">
-            <h3 style="margin-bottom: 1rem; color: #fff;"><i>Ritorno</i></h3>
+            <h4 style="margin-bottom: 1rem; color: #fff;"><i>Ritorno</i></h4>
             <form>
               <label>
                 <input type="radio" name="ritorno" v-model="ritorno"/>
@@ -102,6 +107,8 @@
         <i>Limite di 22 posti per viaggio</i>
         <br />
         <i>Costo del biglietto €4.00 per singola tratta</i>
+        <br />
+        Per prenotare <a href="tel:348 649 3733">348 649 3733</a>
       </div>
     </div>
   </div>
@@ -155,14 +162,19 @@ h1 {
 
 h2 {
   text-align: center;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0rem;
 }
 
 h3 {
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+h4 {
   font-size: 1.3rem;
   text-align: center;
   margin-top: 0.5rem;
-  margin-bottom: 1rem;
 }
 
 form {
