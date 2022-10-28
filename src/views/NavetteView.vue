@@ -168,7 +168,7 @@ h2 {
 h3 {
   font-size: 1.1rem;
   text-align: center;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 h4 {
