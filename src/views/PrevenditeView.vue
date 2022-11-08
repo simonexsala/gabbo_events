@@ -79,11 +79,33 @@
           <h3 v-else align="center"><i>Seleziona il tipo di ingresso</i></h3>
         </div>
         <div v-else align="center" style="margin-bottom: 1rem;">
-          <h3 align="center" style="color: #fff">
-            <i>Ingresso €{{ product.price }}0 {{ product.description }}</i>
-          </h3>
-          <div style="font-size: 0.9rem;">
-            <i>Commissione €0.70</i>
+          <div class="container">
+            <h3 align="center" style="color: #fff">
+              <i>Ingresso €{{ product.price }}0 {{ product.description }}</i>
+            </h3>
+            <div style="font-size: 0.9rem;">
+              <i>Commissione di €0.70 per ingresso inclusa</i>
+            </div>
+            <label >
+              <span>
+                Quantità
+              </span>
+              <select class="select" v-model="selected" @change="changeNumber($event)">
+                <option :selected="true">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+              </select>
+            </label>
+            <h4>
+              Totale provvisorio <i>€{{ product.finalAmount }}0</i>
+            </h4>
           </div>
         </div>
       </div>
@@ -115,12 +137,14 @@ export default {
       paidFor: false,
 
       loaded: false,
+      selected: 1,
       product: {
         title: "Una notte da Leoni",
         price: 15.70,
         location: "Assicura Arena",
         date: "12 Novembre",
         description: "",
+        finalAmount: 15.70,
       },
     };
   },
@@ -131,6 +155,10 @@ export default {
     document.body.appendChild(script);
   },
   methods: {
+    changeNumber (event) {
+      this.product.finalAmount = (event.target.value * this.product.price).toFixed(1);
+    },
+
     setLoaded: function () {
       this.loaded = true;
       window.paypal.Buttons({
@@ -147,7 +175,7 @@ export default {
               description: "Gabbo Events " + this.product.title + " " + this.product.date,
               amount: {
                 currency_code: "EUR",
-                value: this.product.price
+                value: this.product.finalAmount
               }
             }]
           });
@@ -199,6 +227,35 @@ h2 {
 h3 {
   font-size: 1.3rem;
   text-align: center;
+}
+
+.container {
+  overflow: hidden;
+  background-color: #cba6f722;
+  border-radius: 30px;
+  padding: 10px;
+  margin-top: 0.5rem;
+}
+
+.select {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-left: 0.3rem;
+
+  background-color: #fff;
+  border: none;
+  border-radius: 50px;
+  color: #1b1b1bde;
+  cursor: pointer;
+  font-family: "Fira Sans", sans-serif;
+  line-height: 1;
+  padding-top: 5px;
+  padding-bottom: 3px;
+  padding-left: 5px;
+  transition: all .05s cubic-bezier(.4, 0, .2, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
 
 .button {
