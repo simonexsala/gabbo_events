@@ -130,7 +130,7 @@ export default {
   data: function () {
     return {
       active: true,
-      soldOut: false,
+      soldOut: true,
 
       selected: false,
       options: false,
