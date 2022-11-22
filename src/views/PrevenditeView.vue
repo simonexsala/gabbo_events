@@ -59,27 +59,79 @@
         <h2 align="center">
           {{ product.location }}, {{ product.date }}
         </h2>
-        
-        <div v-if="options" align="center">
-          <div align="center">
-            <button 
-              class="button" 
-              @click="product.price = 15; product.description = 'free drink'; selected = true">
-              Drink
-            </button>
-            <button 
-              class="button" 
-              @click="product.price = 17; product.description = 'birra illimitata'; selected = true">
-              Birra
-            </button>
+
+        <div class="container">
+          <div v-if="options" align="center">
+
+              <h3 v-if="optionSelected" align="center" style="color: #fff">
+                <i>€{{ product.price }}0 con {{ product.description }}</i>
+              </h3>
+              <h3 v-else align="center"><i>Seleziona il tipo di ingresso</i></h3>
+            <!--
+            <div align="center">
+              <button 
+                class="button" 
+                @click="product.price = 15.7; product.description = 'free drink'; product.finalAmount = product.price * quantity; optionSelected = 'true'">
+                Drink
+              </button>
+              <button 
+                class="button" 
+                @click="product.price = 17.7; product.description = 'birra illimitata'; product.finalAmount = product.price * quantity; optionSelected = 'true'">
+                Birra
+              </button>
+            </div>
+            -->
+
+            <div class="wrapper">
+              <input 
+                type="radio"
+                name="type" 
+                id="one" 
+                @click="product.price = 13.7; product.description = 'free drink'; product.finalAmount = (product.price * quantity).toFixed(1); optionSelected = 'true'"
+                >
+              <input 
+                type="radio" 
+                name="type" 
+                id="two"
+                @click="product.price = 15.7; product.description = 'birra illimitata'; product.finalAmount = (product.price * quantity).toFixed(1); optionSelected = 'true'"
+                >
+              <label for="one" class="option option-1">
+                <span>Drink</span>
+              </label>
+              <label for="two" class="option option-2">
+                <span>Birra</span>
+              </label>
+            </div>
+
+            <Transition>
+              <label v-if="optionSelected">
+                <span>
+                  Quantità
+                </span>
+                <select class="select" v-model="selected" @change="changeNumber($event)">
+                  <option :selected="true">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+              </label>
+            </Transition>
+            <Transition>
+              <h3 v-if="optionSelected" align="center">
+                Totale provvisorio <i>€{{ product.finalAmount }}0</i>
+                <div style="font-size: 0.9rem;">
+                  <i>Commissione di €0.70 per ingresso inclusa</i>
+                </div>
+              </h3>
+            </Transition>
           </div>
-          <h3 v-if="selected" align="center">
-            <i>€{{ product.price }} con {{ product.description }}</i>
-          </h3>
-          <h3 v-else align="center"><i>Seleziona il tipo di ingresso</i></h3>
-        </div>
-        <div v-else align="center" style="margin-bottom: 1rem;">
-          <div class="container">
+          <div v-else align="center" >
             <h3 align="center" style="color: #fff">
               <i>Ingresso €{{ product.price }}0 {{ product.description }}</i>
             </h3>
@@ -129,22 +181,23 @@ export default {
   name: "Prevendite",
   data: function () {
     return {
-      active: true,
-      soldOut: true,
+      active: false,
+      soldOut: false,
 
-      selected: false,
-      options: false,
+      optionSelected: false,
+      options: true,
       paidFor: false,
 
       loaded: false,
       selected: 1,
+      quantity: 1,
       product: {
-        title: "Una notte da Leoni",
-        price: 15.70,
-        location: "Assicura Arena",
-        date: "12 Novembre",
+        title: "Elite Party",
+        price: 13.70,
+        location: "Rosalpina",
+        date: "10 Dicembre",
         description: "",
-        finalAmount: 15.70,
+        finalAmount: 13.70,
       },
     };
   },
@@ -157,6 +210,7 @@ export default {
   methods: {
     changeNumber (event) {
       this.product.finalAmount = (event.target.value * this.product.price).toFixed(1);
+      this.quantity = event.target.value;
     },
 
     setLoaded: function () {
@@ -210,8 +264,14 @@ export default {
   }
 }
 
-.opacity {
-  opacity: 0.3;
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 1s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
 }
 
 h1 {
@@ -235,6 +295,7 @@ h3 {
   border-radius: 30px;
   padding: 10px;
   margin-top: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .select {
@@ -293,6 +354,49 @@ h3 {
 button:focus { 
   background-color: #F16466; 
   color: #fff; 
+}
+
+button:active { 
+  background-color: #F16466; 
+  color: #fff; 
+}
+
+.wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.wrapper .option {
+  background: #fff;
+  color: #000;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  cursor: pointer;
+  border-radius: 50px;
+  padding: 0 25px;
+  transition: all 0.5s ease;
+  margin: 0 10px;
+}
+input[type="radio"] {
+  display: none;
+}
+input#one:checked ~ .option-1,
+input#two:checked ~ .option-2 {
+  background: #F16466;
+  border-radius: 50px;
+}
+input#one:checked ~ .option-1 span,
+input#two:checked ~ .option-2 span {
+  color: #fff;
+}
+.wrapper .option span {
+  font-size: 1.5rem;
 }
 
 .loader {
