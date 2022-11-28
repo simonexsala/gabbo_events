@@ -181,7 +181,7 @@ export default {
   name: "Prevendite",
   data: function () {
     return {
-      active: false,
+      active: true,
       soldOut: false,
 
       optionSelected: false,
