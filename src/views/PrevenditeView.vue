@@ -102,7 +102,7 @@
                 <span>Birra</span>
               </label>
             </div>
-            </br>
+            <br>
 
             <Transition>
               <label v-if="optionSelected">
