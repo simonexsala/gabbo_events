@@ -24,7 +24,7 @@ import PartyIcon from './icons/IconParty.vue'
     <template #icon>
       <PartyIcon />
     </template>
-    <template #heading>Navette</template>
-    Consulta gli orari del trasporto
+    <template #heading>Tavoli</template>
+    Acquista un tavolo in un formato speciale per divertirti ancora di più
   </WelcomeItem>
 </template>
