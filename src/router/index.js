@@ -29,6 +29,11 @@ const router = createRouter({
       name: 'navette',
       component: () => import('../views/NavetteView.vue')
     },
+    {
+      path: '/tavoli',
+      name: 'tavoli',
+      component: () => import('../views/TavoliView.vue')
+    },
   ]
 })
 
