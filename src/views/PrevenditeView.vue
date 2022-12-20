@@ -227,7 +227,7 @@ export default {
         createOrder: (data, actions) => {
           return actions.order.create({
             purchase_units: [{
-              description: "Gabbo Events " + this.product.title + " " + this.product.date,
+              description: "Gabbo Events Prevendita " + this.quantity + " " + this.product.description,
               amount: {
                 currency_code: "EUR",
                 value: this.product.finalAmount
