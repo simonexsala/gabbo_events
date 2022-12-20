@@ -127,7 +127,7 @@
               <h3 v-if="optionSelected" align="center">
                 Totale provvisorio <i>€{{ product.finalAmount }}0</i>
                 <div style="font-size: 0.9rem;">
-                  <i>Commissione di €0.70 per ingresso inclusa</i>
+                  <i>(Commissione di €0.70 per ingresso inclusa)</i>
                 </div>
               </h3>
             </Transition>
@@ -137,7 +137,7 @@
               <i>Ingresso €{{ product.price }}0 {{ product.description }}</i>
             </h3>
             <div style="font-size: 0.9rem;">
-              <i>Commissione di €0.70 per ingresso inclusa</i>
+              <i>(Commissione di €0.70 per ingresso inclusa)</i>
             </div>
             <label >
               <span>
@@ -183,7 +183,7 @@ export default {
   data: function () {
     return {
       active: true,
-      soldOut: true,
+      soldOut: false,
 
       optionSelected: false,
       options: true,
@@ -193,10 +193,10 @@ export default {
       selected: 1,
       quantity: 1,
       product: {
-        title: "Elite Party",
+        title: "Anniversary Party",
         price: 13.70,
         location: "Rosalpina",
-        date: "10 Dicembre",
+        date: "27 Dicembre",
         description: "",
         finalAmount: 13.70,
       },

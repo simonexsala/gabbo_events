@@ -59,12 +59,12 @@ export default {
       selected: 6,
       quantity: 6,
       product: {
-        title: "Elite Party",
-        price: 20,
+        title: "Anniversary Party",
+        price: 25,
         location: "Rosalpina",
-        date: "10 Dicembre",
+        date: "27 Dicembre",
         description: "",
-        finalAmount: 122.4,
+        finalAmount: 153.5,
       },
     };
   },

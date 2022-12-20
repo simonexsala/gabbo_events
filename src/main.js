@@ -13,9 +13,9 @@ app.use(router)
 app.mount('#app')
 
 app.config.globalProperties.$event =  { 
-  title: "Elite Party", 
+  title: "Anniversary Party", 
   venue: "alla ", 
   location: "Rosalpina", 
-  date: "10 Dicembre", 
+  date: "27 Dicembre", 
   address: "Via Pianizza, 27, Trento" 
 }
