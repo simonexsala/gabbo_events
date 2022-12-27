@@ -183,7 +183,7 @@ export default {
   data: function () {
     return {
       active: true,
-      soldOut: true,
+      soldOut: false,
 
       optionSelected: false,
       options: true,
