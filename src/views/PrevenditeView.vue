@@ -87,13 +87,13 @@
                 type="radio"
                 name="type" 
                 id="one" 
-                @click="product.price = 13.7; product.description = 'free drink'; product.finalAmount = (product.price * quantity).toFixed(1); optionSelected = 'true'"
+                @click="product.price = 14.90; product.description = 'free drink'; product.finalAmount = (product.price * quantity).toFixed(1); optionSelected = 'true'"
                 >
               <input 
                 type="radio" 
                 name="type" 
                 id="two"
-                @click="product.price = 15.7; product.description = 'birra illimitata'; product.finalAmount = (product.price * quantity).toFixed(1); optionSelected = 'true'"
+                @click="product.price = 16.90; product.description = 'birra illimitata'; product.finalAmount = (product.price * quantity).toFixed(1); optionSelected = 'true'"
                 >
               <label for="one" class="option option-1">
                 <span>Drink</span>
@@ -127,7 +127,7 @@
               <h3 v-if="optionSelected" align="center">
                 Totale provvisorio <i>€{{ product.finalAmount }}0</i>
                 <div style="font-size: 0.9rem;">
-                  <i>(Commissione di €0.70 per ingresso inclusa)</i>
+                  <i>(Commissione inclusa)</i>
                 </div>
               </h3>
             </Transition>
@@ -137,7 +137,7 @@
               <i>Ingresso €{{ product.price }}0 {{ product.description }}</i>
             </h3>
             <div style="font-size: 0.9rem;">
-              <i>(Commissione di €0.70 per ingresso inclusa)</i>
+              <i>(Commissione inclusa)</i>
             </div>
             <label >
               <span>
@@ -194,11 +194,11 @@ export default {
       quantity: 1,
       product: {
         title: "Anniversary Party",
-        price: 13.70,
+        price: 14.90,
         location: "Rosalpina",
         date: "27 Dicembre",
         description: "",
-        finalAmount: 13.70,
+        finalAmount: 14.90,
       },
     };
   },
